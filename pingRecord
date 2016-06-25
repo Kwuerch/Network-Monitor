@@ -1,0 +1,5 @@
+#!/bin/bash
+DIREC="/home/pi/network_monitor"
+date +%s > $DIREC/tmp/date
+ping -c5 www.google.com | java -cp $DIREC PingCSV > $DIREC/tmp/data
+echo $(cat $DIREC/tmp/date) "," $(cat $DIREC/tmp/data) >> $DIREC/five_min_data.csv

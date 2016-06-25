@@ -1,0 +1,6 @@
+#!/bin/bash
+DIREC="/home/pi/network_monitor"
+ARCH_DIREC="/home/pi/network_monitor/archive"
+
+cat $DIREC/message | mail -s "Daily Ping Results" -A $DIREC/five_min_data.csv kwwuerch@gmail.com
+mv $DIREC/five_min_data.csv $ARCH_DIREC/$(date +%s)
