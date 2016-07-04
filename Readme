@@ -1,0 +1,2 @@
+PingRecord will record data every five minutes into the five_min_data.csv file with the respective time at which the ping occured.
+This file can then be emailed out at any specified interval of time determined by the user.
